@@ -1,0 +1,19 @@
+<header class="p-3 mb-2">
+    <blockquote class="blockquote text-center">
+        <h1 class="display-2">{{title}}</h1>
+    </blockquote>
+</header>
+<br>
+<div class="btn-group-vertical">
+    <button type="button" class="btn btn-secondary" (click)="getPlayers('GOALKEAPER')">GOALKEAPERS</button>
+    <button type="button" class="btn btn-secondary" (click)="getPlayers('DEFENDER')">DEFENDERS</button>
+    <button type="button" class="btn btn-secondary" (click)="getPlayers('MIDFIELDER')">MIDFIELDERS</button>
+    <button type="button" class="btn btn-secondary" (click)="getPlayers('STRIKER')">STRIKERS</button>
+</div>
+<br>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" (change)="changeSelection($event)">
+    <label class="form-check-label">
+        Shuffle
+    </label>
+  </div>
