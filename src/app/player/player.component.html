@@ -1,9 +1,11 @@
-<header class="p-3 mb-2">
+<header class="p-3 mb-2 bg-info">
     <blockquote class="blockquote text-center">
-        <h1 class="display-2">{{role}}s</h1>
+        <h1 class="display-2">{{role}}S</h1>
     </blockquote>
 </header>
-<br>
+<div class="d-grid gap-2">
+    <button type="submit" class="btn btn-success" (click)="back()">BACK</button>
+</div>
 <div class="card">
     <h5 class="card-header">PLAYER</h5>
     <div class="card-body">
@@ -17,18 +19,15 @@
         <li class="list-group-item"><strong>Red cards:</strong> {{players[index].nredcard}}</li>
     </ul>
     <div class="card-body">
-        <h5 class="card-title"><strong>{{players[index].quote}}</strong></h5>
+        <h5 class="card-title">Quote: <strong class="bg-warning">{{players[index].quote}}</strong></h5>
     </div>
 </div>
-<p></p>
-<div class="btn-group btn-group-lg float-sm-right" role="group">
-    <div class="btn-group float-sm-right" role="group">
-        <button type="submit" class="btn btn-danger btn-lg"
-            (click)="prevMedia()">PREVIOUS</button>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end d-md-block" role="group">
+    <div class="btn-group float-sm-left" role="group">
+        <button type="submit" class="btn btn-danger btn-lg" (click)="prevMedia()">PREVIOUS</button>
     </div>
     <p></p>
     <div class="btn-group float-sm-right" role="group">
-        <button type="submit" class="btn btn-danger btn-lg"
-            (click)="nextMedia()">NEXT</button>
+        <button type="submit" class="btn btn-danger btn-lg" (click)="nextMedia()">NEXT</button>
     </div>
 </div>

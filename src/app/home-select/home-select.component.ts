@@ -9,7 +9,7 @@ import { FantaserviceService } from '../services/fantaservice.service';
 })
 export class HomeSelectComponent implements OnInit {
 
-  title = 'AUCTION'
+  title = 'FANTACALCIO AUCTION'
 
   shuffle: boolean = false;
 
@@ -25,8 +25,6 @@ export class HomeSelectComponent implements OnInit {
   }
   
   getPlayers(role: string) {
-    console.log(role);
-    console.log(this.shuffle);
     this.fantaserviceService.searchPlayersWithRole(role, this.shuffle).subscribe(response => {
       console.log(response);
       this.fantaserviceService.setListOfPlayers(response);

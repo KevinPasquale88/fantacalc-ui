@@ -25,6 +25,8 @@ export class PlayerComponent implements OnInit {
   nextMedia() {
     if (this.index <= this.players.length) {
       this.index = this.index + 1;
+    }else{
+      this.index = 0;
     }
   }
 
