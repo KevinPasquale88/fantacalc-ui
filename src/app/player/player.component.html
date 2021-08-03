@@ -1,1 +1,34 @@
-<p>player works!</p>
+<header class="p-3 mb-2">
+    <blockquote class="blockquote text-center">
+        <h1 class="display-2">{{role}}s</h1>
+    </blockquote>
+</header>
+<br>
+<div class="card">
+    <h5 class="card-header">PLAYER</h5>
+    <div class="card-body">
+        <h5 class="card-title"><strong>{{players[index].surname}} {{players[index].name}} </strong></h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Team:</strong> {{players[index].team}}</li>
+        <li class="list-group-item"><strong>Goals:</strong> {{players[index].ngoal}}</li>
+        <li class="list-group-item"><strong>Assists:</strong> {{players[index].nassist}}</li>
+        <li class="list-group-item"><strong>Yellow cards:</strong> {{players[index].nyellowcard}}</li>
+        <li class="list-group-item"><strong>Red cards:</strong> {{players[index].nredcard}}</li>
+    </ul>
+    <div class="card-body">
+        <h5 class="card-title"><strong>{{players[index].quote}}</strong></h5>
+    </div>
+</div>
+<p></p>
+<div class="btn-group btn-group-lg float-sm-right" role="group">
+    <div class="btn-group float-sm-right" role="group">
+        <button type="submit" class="btn btn-danger btn-lg"
+            (click)="prevMedia()">PREVIOUS</button>
+    </div>
+    <p></p>
+    <div class="btn-group float-sm-right" role="group">
+        <button type="submit" class="btn btn-danger btn-lg"
+            (click)="nextMedia()">NEXT</button>
+    </div>
+</div>

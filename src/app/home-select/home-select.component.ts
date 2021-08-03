@@ -28,8 +28,9 @@ export class HomeSelectComponent implements OnInit {
     console.log(role);
     console.log(this.shuffle);
     this.fantaserviceService.searchPlayersWithRole(role, this.shuffle).subscribe(response => {
+      console.log(response);
       this.fantaserviceService.setListOfPlayers(response);
-      this.router.navigate(['role', role]);
+      this.router.navigate(['players', role]);
     }, errors => {
       console.log(errors);
     });
