@@ -3,16 +3,12 @@ import { Injectable } from '@angular/core';
 import { Cookie } from 'ng2-cookies';
 
 export class Player {
-  constructor(public idplayer: string,
+  constructor(public idplayer: number,
     public name: string,
-    public surname: string,
     public team: string,
     public quote: string,
     public role: string,
-    public ngoal: string,
-    public nassist: string,
-    public nyellowcard: string,
-    public nredcard: string) { }
+    public fvm: number) { }
 }
 
 @Injectable({
